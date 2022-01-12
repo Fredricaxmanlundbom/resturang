@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Spartan:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Frank+Ruhl+Libre:wght@300&family=Spartan:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="jquery.flipster.min.css">
+  <meta charset="utf-8">
+  <title>Hanoi Kitchen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+  <header>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <div class="container">
+      <!--  <img src="Bilder/logo.png" alt="logo" class="logo"> -->
+      <nav>
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#storytime">Our Story</a></li>
+          <li><a href="#meny">Meny</a></li>
+          <li><a href="#hitta">Hitta hit</a></li>
+          <li><a class="social-icon" href="https://www.instagram.com/hanoipho.sthlm/">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+          <li><a class="social-icon" href="https://www.facebook.com/hanoi.STHLM">
+              <ion-icon name="logo-facebook"></ion-icon>
+              </ion-icon>
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <a id="storytime"></a>
+  <div class="storytime">
+    <h2> HANOI PHO </h2>
+    <h3>Ett vietnamesisk kök där streetfood möter traditionella maträtter, lagat med själ och hjärta.</h3>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="Bilder/storytime.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="bilder/storytime2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="bilder/storytime3.jpg" style="width:100%">
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+  </div>
+
+
+  <a id="meny"></a>
+  <div class="meny">
+    <h3>GALLERI</h3>
+  </div>
+
+
+  <div class="hero">
+    <div class="carousel">
+
+
+      <ul>
+        <li><a href="menybilder/1. Bun thit nuong.png"><img src="menybilder2/1. Bun thit nuong.png"><h3>BUN THIT NOUNG - FLÄSK BOWL</h3></li>
+        <li><a href="menybilder/2. GÀ XÀO SẢ ỚT – KYCKLING BOWL.png"><img src="menybilder2/2. GÀ XÀO SẢ ỚT – KYCKLING BOWL.png"><h3>GÀ XÀO SẢ ỚT – KYCKLING BOWL</h3></li>
+        <li><a href="menybilder/3. BÒ XÀO – BIFF BOWL.png"><img src="menybilder2/3. BÒ XÀO – BIFF BOWL.png"><h3>BÒ XÀO – BIFF BOWL</h3></li>
+        <li><a href="menybilder/4. TÔM XÀO – SHRIMP BOWL.png"><img src="menybilder2/4. TÔM XÀO – SHRIMP BOWL.png"><h3>TÔM XÀO – SHRIMP BOWL</h3></li>
+        <li><a href="menybilder/5. CHẢ CÁ – FISK BOWL.png"><img src="menybilder2/5. CHẢ CÁ – FISK BOWL.png"><h3>CHẢ CÁ – FISK BOWL</h3></li>
+        <li><a href="menybilder/6. PHỞ GÀ – KYCKLING- OCH NUDELSOPPA.png"><img src="menybilder2/6. PHỞ GÀ – KYCKLING- OCH NUDELSOPPA.png"><h3>PHỞ GÀ – KYCKLING- OCH NUDELSOPPA</h3></li>
+        <li><a href="menybilder/7. PHỞ BÒ – BIFF- OCH NUDELSOPPA.png"><img src="menybilder2/7. PHỞ BÒ – BIFF- OCH NUDELSOPPA.png"><h3>PHỞ BÒ – BIFF- OCH NUDELSOPPA</h3></li>
+        <li><a href="menybilder/8. BÚN CÁ – FISK- OCH NUDELSOPPA.png"><img src="menybilder2/8. BÚN CÁ – FISK- OCH NUDELSOPPA.png"><h3>BÚN CÁ – FISK- OCH NUDELSOPPA</h3></li>
+        <li><a href="menybilder/9. MÌ CHAY – EKO TOFU BOWL.png"><img src="menybilder2/9. MÌ CHAY – EKO TOFU BOWL.png"><h3>MÌ CHAY – EKO TOFU BOWL</h3></li>
+        <li><a href="menybilder/10. BÁNH MÌ - VIỆT BAGUETTE.png"><img src="menybilder2/10. BÁNH MÌ - VIỆT BAGUETTE.png"><h3>BÁNH MÌ - VIỆT BAGUETTE</h3></li>
+        <li><a href="menybilder/11. NEM TƯƠI – FÄRSKA VÅRRULLAR.png"><img src="menybilder2/11. NEM TƯƠI – FÄRSKA VÅRRULLAR.png"><h3>NEM TƯƠI – FÄRSKA VÅRRULLAR</h3></li>
+        <li><a href="menybilder/12. GỎI MIẾN – GLASNUDELSALLAD.png"><img src="menybilder2/12. GỎI MIẾN – GLASNUDELSALLAD.png"><h3>GỎI MIẾN – GLASNUDELSALLAD</h3></li>
+        <li><a href="menybilder/13. GỎI BÒ – BIFFSALLAD.png"><img src="menybilder2/13. GỎI BÒ – BIFFSALLAD.png"><h3>GỎI BÒ – BIFFSALLAD</h3></li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.flipster.min.js"></script>
+
+    <script>
+      $('.carousel').flipster({
+        style: 'carousel',
+        spacing: -0.3,
+      });
+    </script>
+  </div>
+
+
+
+
+  <a id="kontakt"></a>
+  <div class="kontakt">
+    <h3>KONTAKTA OSS</h3>
+  </div>
+  <div id="telefon">
+    <h5> 08-128 432 22</h5>
+  </div>
+
+
+  <div class="hitta">
+    <h3>HITTA HIT</h3>
+    <a id="hitta"></a>
+    <h5> Moa Martinsons Torg 8, 112 15, Stockholm, Sverige</h5>
+  </div>
+  <div class="öppettider">
+    <h4>Öppettider</h4>
+    <h5><u>Måndag-Fredag</h5></u>
+    <h5>11:00 - 20.00</h5>
+    <h5><u>Lördag</u>
+      <h5>11.00 - 19.00</h5>
+      <h5><u>Söndag</u>
+        <h5>Stängt</h5>
+  </div>
+  </div>
+
+
+
+  <p>
+  <div style="-webkit-filter: grayscale(100%);filter: grayscale(100%);">
+    <iframe id="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8138.421386817811!2d17.99627844589676!3d59.33954250659725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d8626bcc19f%3A0x26ded24e02954419!2sMoa%20Martinsons%20Torg%208%2C%20112%2016%20Stockholm!5e0!3m2!1ssv!2sse!4v1641554807665!5m2!1ssv!2sse"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+  </div>
+
+
+</body>
+</html>
